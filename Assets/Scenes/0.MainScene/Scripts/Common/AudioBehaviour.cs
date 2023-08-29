@@ -10,6 +10,10 @@ public class AudioBehaviour : MonoBehaviour
     public void TogglePlay()
     {
         play = !play;
-        player.mute = play;
+
+        if (play)
+            player.Play();
+        else
+            player.Stop();
     }
 }
